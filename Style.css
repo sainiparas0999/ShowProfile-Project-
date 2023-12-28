@@ -1,0 +1,312 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.outerwrapper{
+    overflow-x: hidden;
+    overflow-y: hidden;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle1{
+    background: linear-gradient(-25deg, #f31549, #f7633e);
+    box-shadow: 0 0 90px #e91143;
+    position: absolute;
+   top: 5%;
+   left: 35%;
+    height: 11em;
+    width: 11em;
+    border-radius: 100%;
+    animation: circle1Move 15s infinite;
+}
+ 
+@keyframes circle1Move {
+    
+    0%{
+        top: 5%;
+        left: 30%;
+    }
+    50%{
+        top: 6%;
+        left:35% ;
+        scale: 1.11;
+    }
+
+    100%{
+        top: 5%;
+        left: 30%;
+    }
+}
+
+.circle2{
+    box-shadow: 0 0 50px #5648d8;
+    background: linear-gradient(-25deg, #5648d8, #8641f4);
+    position: absolute;
+   bottom: 5%;
+   right: 30%;
+    height: 11em;
+    width: 11em;
+    border-radius: 100%;
+    animation: circle2Move 15s infinite;
+}
+
+@keyframes circle2Move {
+    
+50%{
+    bottom: 7%;
+    right:35%;
+    scale: 1.11;
+}
+
+}
+
+.cardWrapper{
+       border: grey solid 2px ;
+       display: flex;
+       flex-direction: column; 
+       justify-content: space-evenly;
+       align-items: center;
+       background: #ffffff1a;
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    color: #ffffff;
+    padding: 20px 50px;
+    height: 500px;
+    width: 20%;
+}
+.image{
+    border-radius: 100%;
+    overflow: hidden;
+}
+
+.heading{
+    color: white;
+    font-weight: bolder;
+    font-size:45px;
+}
+
+.sub-heading{
+    text-align: center;
+    color: #ffffff85;
+    font-size: 20px;
+}
+
+.buttonwrapper{
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.firstButton{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 9px 12px;
+    background: #ffffff00;
+    border: 2px solid #ffffffb9;
+    text-transform: capitalize;
+    border-radius: 4px;
+    color: #ffffffb9;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    gap: 2px;
+}
+
+.firstButton:hover{
+    background-color: white;
+    color: #000;
+}
+
+.secondButton{
+    
+    background: #ffffff00;
+    border: 2px solid #ffffffb9;
+    text-transform: capitalize;
+    border-radius: 4px;
+    color: #ffffffb9;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 9px 12px;
+}
+.secondButton:hover{
+    background-color: white;
+    color: #000;
+}
+
+.modal{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    border: 2px solid #ffffff59;
+    width: 500px;
+    scale: 0;
+    background: #00000088;
+    backdrop-filter: blur(10px);
+    color: white;
+    z-index: 1;
+    padding: 20px 25px;
+    border-radius: 20px;
+    transition: 0.5s ease-in-out;
+}
+
+.modalHead{
+    display: flex;
+    margin-bottom: 25px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #ffffff88;
+}
+
+.SmallLine{
+    font-size: 12px;
+}
+
+.iconsDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.close{
+    cursor: pointer;
+}
+
+.icon{
+    border: 1px solid #ffffff88;
+    padding: 17px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    margin: 10px 0px;
+    gap: 10px;
+    justify-content: center;
+    transition: all 0.5s;
+    margin-bottom: 25px;
+    text-decoration: none;
+}
+.icon i {
+    font-size: 27px;
+  }
+  
+  #facebook {
+    color: #1771e6;
+    border: 1px solid #1771e6;
+  }
+  #facebook:hover {
+    background-color: #1771e6;
+    color: #fff;
+  }
+  
+  #twitter {
+    color: #1c99e6;
+    border: 1px solid #1c99e6;
+  }
+  #twitter:hover {
+    background-color: #1c99e6;
+    color: #fff;
+  }
+  
+  #instagram {
+    color: #cb2770;
+    border: 1px solid #cb2770;
+  }
+  #instagram:hover {
+    background-color: #cb2770;
+    color: #fff;
+  }
+  
+  #whatsapp {
+    color: #2fe664;
+    border: 1px solid #2fe664;
+  }
+  #whatsapp:hover {
+    background-color: #2fe664;
+    color: #fff;
+  }
+  
+  #telegram {
+    color: #0081c2;
+    border: 1px solid #0081c2;
+  }
+  #telegram:hover {
+    background-color: #0081c2;
+    color: #fff;
+  }
+
+  .active {
+    scale: 1;
+  }
+  .overlay {
+    position: fixed;
+    background-color: #5f5f5f83;
+    top: 0;
+    opacity: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+    transition: 0.5s ease-in-out;
+  }
+  .overlayactive {
+    opacity: 1;
+    pointer-events: initial;
+  }
+  @media (max-width: 850px) {
+    .card-wrapper {
+      max-width: 250px;
+      width: 300px;
+    }
+    .bottom-group {
+      flex-direction: column;
+    }
+    .modal {
+      width: 70vw;
+    }
+  }
+  
+  @media (max-width: 400px) {
+    .wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .card-wrapper {
+      position: static;
+      top: 0;
+      left: 0;
+      translate: 0 0;
+      margin: 0 12px;
+      padding: 0 10px;
+    }
+    .card-wrapper div img {
+      width: 120px;
+      height: 120px;
+    }
+    .user-name h2 {
+      font-size: 1.3rem;
+    }
+    .modal {
+      width: 80vw;
+    }
+  }
+
+
+
